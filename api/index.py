@@ -32,5 +32,3 @@ def post(id):
     print(id)
     return render_template("post.html", post=data)
 
-
-app.run(debug=True)
