@@ -12,6 +12,7 @@ databases = Databases(client)
 app = Flask(__name__)
 
 
+
 @app.route("/")
 def main():
     data = databases.list_documents(
