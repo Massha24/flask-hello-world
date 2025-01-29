@@ -64,6 +64,3 @@ def addPost():
         )
         return redirect("/")
     return render_template('addPost.html', form=form)
-
-
-app.run(debug=True)
