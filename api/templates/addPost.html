@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Title</title>
+    <style>
+        input{
+        border: 1px solid black;
+        border-radius: 20px;
+        }
+    </style>
+</head>
+<body>
+<form method="post" action="/add-post" class="flex flex-col gap-3 max-w-[400px] m-4 p-4 shadow rounded-md">
+<label>title {{form["title"]}}</label>
+   {{form["author"]}}
+   {{form["authorImage"]}}
+   {{form["content"]}}
+   {{form["titleImage"]}}
+   {{form["description"]}}
+    <button>Мяу♥</button>
+</form>
+</body>
+</html>

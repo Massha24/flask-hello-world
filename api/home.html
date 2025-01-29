@@ -5,56 +5,61 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="icon" type="image/x-icon" href="https://cdn-icons-png.flaticon.com/256/8817/8817973.png">
-    <title>Zoo♥</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
 </head>
 <body>
 <div class="bg-white py-24 sm:py-32">
-  <div class="mx-auto max-w-7xl px-6 lg:px-8">
-    <div class="mx-auto max-w-2xl lg:mx-0">
-      <h2 class="text-pretty text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl"> Маленький зоопарк</h2>
-      <p class="mt-2 text-lg/8 text-gray-600">Тобі сподобаються ці хвостики♥</p>
-    </div>
-
-    <div class="mx-auto mt-10 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 border-t border-gray-200 pt-10 sm:mt-16 sm:pt-16 lg:mx-0 lg:max-w-none lg:grid-cols-3">
-
-      {%for post in posts%}
-      <article class="flex max-w-xl flex-col items-start justify-between">
-        <div class="flex items-center gap-x-4 text-xs">
-          <time datetime="2020-03-16" class="text-gray-500">{{ post["$createdAt"] }}</time>
-          <a href="#" class="relative z-10 rounded-full bg-gray-50 px-3 py-1.5 font-medium text-gray-600 hover:bg-gray-100">ZooWorld</a>
-        </div>
-        <img src="{{post.titleImage}}" alt="" class="h-[400px] w-full object-cover rounded-lg">
-        <div class="group relative">
-          <h3 class="mt-3 text-lg/6 font-semibold text-gray-900 group-hover:text-gray-600">
-            <a href="/{{post['$id']}}">
-              <span class="absolute inset-0"></span>
-              {{post.title}}
+    <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <div class="flex justify-between items-start">
+            <div class="mx-auto max-w-2xl lg:mx-0">
+                <h2 class="text-pretty text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl"> Маленький
+                    зоопарк</h2>
+                <p class="mt-2 text-lg/8 text-gray-600">Тобі сподобаються ці хвостики♥</p>
+            </div>
+            <a href="/add-post" class="px-4 py-2 rounded-md border border-black hover:bg-black hover:text-white transition duration-1000">
+                КУку
             </a>
-          </h3>
-
-          <p class="mt-5 line-clamp-3 text-sm/6 text-gray-600">{{post.description}}</p>
         </div>
-        <div class="relative mt-8 flex items-center gap-x-4">
-          <img src="{{post.authorImage}}" alt="" class="size-10 rounded-full bg-gray-50">
-          <div class="text-sm/6">
-            <p class="font-semibold text-gray-900">
-              <a href="#">
-                <span class="absolute inset-0"></span>
-                {{post.author}}
-              </a>
-            </p>
-            <p class="text-gray-600">author</p>
-          </div>
-        </div>
-      </article>
-      {%endfor%}
+        <div class="mx-auto mt-10 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 border-t border-gray-200 pt-10 sm:mt-16 sm:pt-16 lg:mx-0 lg:max-w-none lg:grid-cols-3">
 
-      <!-- More posts... -->
+            {%for post in posts%}
+            <article class="flex max-w-xl flex-col items-start justify-between">
+                <div class="flex items-center gap-x-4 text-xs">
+                    <time datetime="2020-03-16" class="text-gray-500">{{ post["$createdAt"] }}</time>
+                    <a href="#"
+                       class="relative z-10 rounded-full bg-gray-50 px-3 py-1.5 font-medium text-gray-600 hover:bg-gray-100">ZooWorld</a>
+                </div>
+                <img src="{{post.titleImage}}" alt="" class="h-[400px] w-full object-cover rounded-lg">
+                <div class="group relative">
+                    <h3 class="mt-3 text-lg/6 font-semibold text-gray-900 group-hover:text-gray-600">
+                        <a href="/{{post['$id']}}">
+                            <span class="absolute inset-0"></span>
+                            {{post.title}}
+                        </a>
+                    </h3>
+
+                    <p class="mt-5 line-clamp-3 text-sm/6 text-gray-600">{{post.description}}</p>
+                </div>
+                <div class="relative mt-8 flex items-center gap-x-4">
+                    <img src="{{post.authorImage}}" alt="" class="size-10 rounded-full bg-gray-50">
+                    <div class="text-sm/6">
+                        <p class="font-semibold text-gray-900">
+                            <a href="#">
+                                <span class="absolute inset-0"></span>
+                                {{post.author}}
+                            </a>
+                        </p>
+                        <p class="text-gray-600">author</p>
+                    </div>
+                </div>
+            </article>
+            {%endfor%}
+
+            <!-- More posts... -->
+        </div>
+
     </div>
-
-  </div>
 </div>
 
 
